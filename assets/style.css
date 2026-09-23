@@ -1,0 +1,445 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fb;
+    color: #1f2937;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    width: min(1200px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+/* HEADER */
+
+.site-header {
+    background: #111827;
+    color: #fff;
+}
+
+.header-inner {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.main-nav {
+    display: flex;
+    gap: 25px;
+}
+
+.main-nav a {
+    color: #d1d5db;
+    transition: 0.2s;
+}
+
+.main-nav a:hover {
+    color: #fff;
+}
+
+/* HERO */
+
+.hero {
+    padding: 70px 0 45px;
+}
+
+.hero h1 {
+    margin: 0 0 15px;
+    font-size: 42px;
+}
+
+.hero p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 18px;
+}
+
+/* PROJECTS */
+
+.projects-section {
+    padding-bottom: 70px;
+}
+
+.projects-section h2 {
+    margin-bottom: 30px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.project-card {
+    overflow: hidden;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+}
+
+.project-image {
+    height: 210px;
+    background: #e5e7eb;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.no-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6b7280;
+}
+
+.project-card-content {
+    padding: 22px;
+}
+
+.project-card h3 {
+    margin: 12px 0;
+    font-size: 22px;
+}
+
+.project-card p {
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+.project-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.category {
+    color: #2563eb;
+    font-weight: 600;
+}
+
+.date {
+    white-space: nowrap;
+}
+
+/* BUTTONS */
+
+.btn {
+    display: inline-block;
+    padding: 11px 18px;
+    border: 0;
+    border-radius: 7px;
+    background: #2563eb;
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: #1d4ed8;
+}
+
+.btn-small {
+    padding: 7px 11px;
+    font-size: 13px;
+}
+
+.btn-danger {
+    background: #dc2626;
+}
+
+.btn-danger:hover {
+    background: #b91c1c;
+}
+
+.btn-secondary {
+    background: #6b7280;
+}
+
+.btn-secondary:hover {
+    background: #4b5563;
+}
+
+/* PROJECT DETAILS */
+
+.project-details {
+    max-width: 900px;
+    margin: 50px auto 80px;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+.back-link {
+    display: block;
+    padding: 20px 25px 0;
+    color: #2563eb;
+}
+
+.project-details-image {
+    margin-top: 20px;
+}
+
+.project-details-image img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.project-details-content {
+    padding: 35px;
+}
+
+.project-details h1 {
+    margin: 20px 0;
+    font-size: 38px;
+}
+
+.project-short-description {
+    color: #6b7280;
+    font-size: 19px;
+}
+
+.project-description {
+    margin: 30px 0;
+    line-height: 1.8;
+}
+
+.project-info {
+    margin-top: 15px;
+}
+
+/* ADMIN */
+
+.admin-header {
+    padding: 45px 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.admin-header h1 {
+    margin: 0 0 8px;
+}
+
+.admin-header p {
+    margin: 0;
+    color: #6b7280;
+}
+
+.admin-table-wrapper {
+    overflow-x: auto;
+    margin-bottom: 60px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.admin-table th {
+    background: #f9fafb;
+}
+
+.actions {
+    white-space: nowrap;
+}
+
+.status {
+    display: inline-block;
+    padding: 5px 9px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status-published {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.status-draft {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+/* FORMS */
+
+.form-section {
+    max-width: 800px;
+    margin: 45px auto 70px;
+}
+
+.project-form {
+    margin-top: 30px;
+    padding: 30px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font: inherit;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+/* MESSAGES */
+
+.success-message,
+.error-message,
+.empty-message {
+    padding: 15px 20px;
+    margin-bottom: 25px;
+    border-radius: 7px;
+}
+
+.success-message {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.error-message {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.empty-message {
+    background: #fff;
+    color: #6b7280;
+}
+
+/* FOOTER */
+
+.site-footer {
+    margin-top: 40px;
+    padding: 30px 0;
+    background: #111827;
+    color: #9ca3af;
+    text-align: center;
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+
+    .container {
+        width: min(100% - 25px, 1200px);
+    }
+
+    .header-inner {
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    .main-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .project-details-content {
+        padding: 25px;
+    }
+
+    .project-details h1 {
+        font-size: 30px;
+    }
+}
